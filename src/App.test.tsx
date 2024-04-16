@@ -2,8 +2,11 @@ import React from 'react';
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+describe('App', () => {
+  test('renders App component without crashing', () => {
+    render(<App />);
+    expect(screen.getByText('Add New Event')).toBeInTheDocument();
+    expect(screen.getByRole('table')).toBeInTheDocument();
+  });
+
 });

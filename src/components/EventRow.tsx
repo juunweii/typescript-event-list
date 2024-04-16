@@ -126,6 +126,7 @@ const EventRow: FC<EventRowProps> = ({
             <button
               onClick={() => deleteEvent(event.id)}
               className="delete-button"
+              data-testid="delete-button"
             >
               <svg
                 focusable="false"
